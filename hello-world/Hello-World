@@ -1,0 +1,55 @@
+print("Hello, world!")
+#
+print(2*3)
+#
+print((3/((1/3.6 + 4)+(1/8.9 + 4)+(1/10 + 4))) - 4)
+# virgula serve para dar espaço
+print("Brasil", "ganhou", 5, "titulos mundiais")
+print("Brasil", "ganhou", 5, "titulos mundiais", end="")
+# end pode separar (se não tiver nada, não pula linha)
+print("Brasil", "ganhou", 5, "titulos mundiais", end="\n")
+# sep é um separador
+print("Brasil", "ganhou", 5, "titulos mundiais", sep="")
+# impressão de variável: variavel = "bla"
+print ("Brasil", "ganhou", 5, "titulos mundiais", sep="-")
+pais = "Itália"
+# type(variavel) retorna no console que tipo é a variável (int, str, float, etc)
+type(pais)
+quantidade = 4
+print (pais, "ganhou", quantidade, "titulos mundiais")
+#
+subst = "Python"
+verbo = "é"
+adjetivo = "fantástico"
+print(subst, verbo, adjetivo, sep="_", end="!\n")
+#
+dia = 15
+mes = 11
+ano = 2020
+print (dia, mes, ano, sep="/")
+# Python tem tipagem dinâmica: só passa a existir quando um valor é atribuído a ela
+pais = "Estados Unidos"
+pais = 1
+print (pais)
+# Python usa Snake_Case para nomes de variáveis:
+idade_mulher = 20
+idade_homem = 22
+# Em linguagens como o Java, usa-se CamelCase
+idadeMulher = 20
+idadeHomem = 22
+#
+print(2+2<4)
+print(7//3==1+1)
+print(2+4+6 > 12)
+print(1387%19==0)
+print(31%2==0)
+qtd_1 = 34.99
+qtd_2 = 29.95
+qtd_3 = 31.5
+print(qtd_1 < 30, qtd_2 < 30, qtd_3 < 30)
+#
+
+
+
+
+

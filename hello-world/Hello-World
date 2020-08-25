@@ -48,6 +48,15 @@ qtd_2 = 29.95
 qtd_3 = 31.5
 print(qtd_1 < 30, qtd_2 < 30, qtd_3 < 30)
 #
+print(2 ** 3 > 16 % 7)
+print(11 // 2)
+# comparações
+# < - menor que
+# > - maior que
+# <= - menor ou igual a
+# >= - maior ou igual a
+# == - igual a
+# != - diferente de
 
 
 

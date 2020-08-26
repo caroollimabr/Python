@@ -1,8 +1,12 @@
+import random
+
 print("*********************************")
 print("Bem-vindo ao jogo de adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+#random cria um número float aleatório. Round arredonda esse numero. Randrange(numero entre 1 e 100). Se colocar só random.randrange(100), o número aleatório será entre 0 e 99.
+numero_secreto = round(random.randrange(1, 101))
+print (numero_secreto)
 total_de_tentativas = 3
 # rodada é o nosso contador i
 rodada = 1

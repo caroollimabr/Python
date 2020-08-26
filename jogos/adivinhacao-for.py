@@ -1,8 +1,13 @@
+#buld-in functions and sequence types: https://docs.python.org/3/library/functions.html
+import random
+
 print("*********************************")
 print("Bem-vindo ao jogo de adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+#random cria um número float aleatório. Round arredonda esse numero
+numero_secreto = round(random.random() * 100)
+
 total_de_tentativas = 3
 # rodada é o nosso contador i
 rodada = 1

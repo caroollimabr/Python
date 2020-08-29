@@ -50,6 +50,10 @@ print(qtd_1 < 30, qtd_2 < 30, qtd_3 < 30)
 #
 print(2 ** 3 > 16 % 7)
 print(11 // 2)
+print(11**2)
+#Operadores novos
+#** potência
+#// (integer division) divide e retorna um valor inteiro: 9//2 = 4, enquanto 9/2 = 4.5
 # comparações
 # < - menor que
 # > - maior que

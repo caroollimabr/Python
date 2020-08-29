@@ -1,13 +1,19 @@
-print("*********************************")
-print("Bem-vindo ao jogo dos nomes!")
-print("*********************************")
+#def define uma função, que pode ter variaveis
+def jogar():
 
-nome = input("Digite seu nome: ")
-sobrenome = input("Digite seu sobrenome: ")
+    print("*********************************")
+    print("Bem-vindo ao jogo dos nomes!")
+    print("*********************************")
 
-# vc pode concatenar strings, mas nunca um número e uma string. Multiplicações vão imprimir a string várias vezes.
-print("Seu nome grudado é " + nome + sobrenome)
+    nome = input("Digite seu nome: ")
+    sobrenome = input("Digite seu sobrenome: ")
 
-print("Seu nome separado é " + nome, sobrenome)
+    # vc pode concatenar strings, mas nunca um número e uma string. Multiplicações vão imprimir a string várias vezes.
+    print("Seu nome grudado é " + nome + sobrenome)
 
-print("FIM DO JOGO")
+    print("Seu nome separado é " + nome, sobrenome)
+
+    print("FIM DO JOGO")
+
+if(__name__ == "__main__"):
+    jogar()

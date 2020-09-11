@@ -1,4 +1,5 @@
-#built-in functions and sequence types: https://docs.python.org/3/library/functions.html exs. type(), abs(), input(), int...
+# built-in functions vc não precisa importar, pois estão disponíveis para uso automaticamente
+# and sequence types: https://docs.python.org/3/library/functions.html exs. type(), abs(), input(), int...
 import random
 
 #def define uma função (pode ter parametros tb. ex: def soma(a, b): return a + b)

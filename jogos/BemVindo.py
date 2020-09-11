@@ -1,5 +1,6 @@
 import nome
 import adivinhacaoFor
+import forca
 
 def bem_vindo():
 
@@ -13,7 +14,7 @@ def bem_vindo():
         print("Usuário não identificado. Bem-vindo ao Carol jogos!")
 
     print("Lista de jogos")
-    print("(1)Nome (2)Adivinhação")
+    print("(1)Nome (2)Adivinhação (3)Forca")
     jogo = int(input("Escolha o seu jogo: "))
 
     if (jogo == 1):
@@ -22,6 +23,10 @@ def bem_vindo():
     elif jogo == 2:
         print("Iniciando o jogo da adivinhação...")
         adivinhacaoFor.jogar()
+
+    if (jogo == 3):
+        print("Iniciando o jogo da forca...")
+        forca.jogar()
 
 if(__name__ == "__main__"):
     bem_vindo()

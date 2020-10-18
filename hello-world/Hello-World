@@ -81,6 +81,10 @@ for i in list:
         aux += i
 print(aux)
 
+I=[1,2,3]
+I[I[1]]=5
+print(I)
+
 #Operadores novos
 #** potência
 #// (integer division) divide e retorna um valor inteiro: 9//2 = 4, enquanto 9/2 = 4.5

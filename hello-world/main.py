@@ -1,16 +1,25 @@
-# This is a sample Python script.
+class Ponto:
+    x = 0
+    y = 0
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+p = Ponto()
+Ponto.x = 1
+p.x = 2
+p.y = 3
+Ponto.y = 4
+print(Ponto.x)
+print(p.x)
+print(Ponto.y)
+print(p.y)
 
+class Cachorro:
+    def __init__(self, idade):
+        self.idade = idade
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Dalmata(Cachorro):
+    def __init__(self, idade, pedigree):
+        super(Dalmata, self).__init__(idade)
+        self.pedigree = pedigree
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+d = Dalmata(3, True)
+print(d.idade, d.pedigree)

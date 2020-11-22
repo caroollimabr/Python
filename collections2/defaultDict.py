@@ -1,19 +1,20 @@
 # https://docs.python.org/3/library/collections.html#collections.defaultdict
 from collections import defaultdict
 
-meu_texto = "O Fulano de Tal é um cavalheiro distinto"
-meu_texto = meu_texto.lower()
+meu_texto = "O Fulano de Tal é um cavalheiro distinto".lower()
 print(meu_texto)
 
 aparicoes = defaultdict(int)
 
 for palavra in meu_texto.split():
-    ate_agora = aparicoes[palavra]
-    aparicoes[palavra] = ate_agora + 1  # verificar cada palavra
+    aparicoes[palavra] += 1  # COUNTER: verificar cada palavra
+#    ate_agora = aparicoes[palavra]
+#    aparicoes[palavra] = ate_agora + 1
 
 print(aparicoes)
 
-####### outra opção
+# outra opção
 dicionario = defaultdict(int)
 dicionario['fulano'] = 15
+dicionario['beltrano'] = 1
 print(dicionario)

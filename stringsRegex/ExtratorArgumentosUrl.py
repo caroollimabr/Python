@@ -5,6 +5,17 @@ class ExtratorArgumentosUrl:
         else:
             raise LookupError("URL inválida.")  # se url estiver vazia, retorne o seguinte erro com a msg
 
+    def __len__(self):  # define o length de uma string
+        return len(self.url)
+
+    def __str__(self):
+        moeda_origem, moeda_destino = self.extrai_argumentos()
+        representacao_string = "Valor: {}\n Moeda de origem: {} \n Moeda de destino: {} \n".format(self.extrai_valor(), moeda_origem, moeda_destino)
+        return representacao_string
+
+    def __eq__(self, outra_instancia):  # método para comparar strings
+        return self.url == outra_instancia.url
+
     @staticmethod
     def url_valida(url):
         if url and url.startswith("https://bytebank.com"):  # se a url não estiver vazia

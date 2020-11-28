@@ -2,9 +2,15 @@ from ExtratorArgumentosUrl import ExtratorArgumentosUrl
 
 url = "https://bytebank.com/cambio?moedaoRigem=moedadestino&moedadestino=dolar&valor=1500"
 argumentos_url = ExtratorArgumentosUrl(url)
+argumentos_url1 = ExtratorArgumentosUrl(url)
+print(id(argumentos_url1))
+print(id(argumentos_url))  # mesmo iguais, o id é diferente. Precisamos de um método para comparar o conteúdo das strings
+
 moeda_origem, moeda_destino = argumentos_url.extrai_argumentos()
 valor = argumentos_url.extrai_valor()
 print(moeda_origem, moeda_destino, valor)
+print(len(argumentos_url))  # com o método da classe ExtratorArgumentosUrl, len() lê a qte caracteres
+print(argumentos_url)
 
 # Extrator_Argumentos_Url.url_valida("a")
 # url = "moedaorigem=real&moedadestino=dolar"
@@ -20,10 +26,10 @@ print(moeda_origem, moeda_destino, valor)
 # banco2 = "Bytebank".lower()
 # print(banco1 == banco2)  # python entende diferença entre maiúsculos e minúsculos
 
-url_bytebank = "https://bytebank.com"
-url1 = "https://buscasites.com/busca?q=https://bytebank.com"
-url2 = "https://bitebank.com.br"
-url3 = "https://bytebank.com/cambio/teste/teste"
+# url_bytebank = "https://bytebank.com"
+# url1 = "https://buscasites.com/busca?q=https://bytebank.com"
+# url2 = "https://bitebank.com.br"
+# url3 = "https://bytebank.com/cambio/teste/teste"
 
 # print(url2.find(url_bytebank))  # não encontrou
 # print(url3.startswith(url_bytebank))

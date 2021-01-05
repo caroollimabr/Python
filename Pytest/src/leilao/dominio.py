@@ -21,24 +21,25 @@ class Leilao:
 
     def __init__(self, descricao):
         self.descricao = descricao
-        self.__lances = []
+        self.__lances = []  # lista
+        self.maior_lance = sys.float_info.min  # pega as informações do float (menor valor)
+        self.menor_lance = sys.float_info.max  # maior valor
 
-    @property
-    def lances(self):
-        return self.__lances
-
-
-class Avaliador:
-    def __init__(self):
-        self.maior_lance = sys.float_info.min ## pega as informações do float (menor valor)
-        self.menor_lance = sys.float_info.max ## maior valor
-
-    def avalia(self, leilao: Leilao): ## anotação (type hint), só para ajudar a n se perder no código
-
-        for lance in leilao.lances:
+    def propoe(self, lance: Lance): # anotação (type hint), só para ajudar a n se perder no código
+        # -1: acesso ao último elemento da lista
+        if not self.__lances or self.__lances[-1].usuario != lance.usuario:  # se a lista estiver vazia "not lances"
             if lance.valor > self.maior_lance:
                 self.maior_lance = lance.valor
             if lance.valor < self.menor_lance:
                 self.menor_lance = lance.valor
+
+        self.__lances.append(lance)
+
+    @property
+    def lances(self):
+        return self.__lances[:]  # devolve copia rasa da lista
+
+
+
 
 

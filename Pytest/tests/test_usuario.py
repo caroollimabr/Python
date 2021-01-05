@@ -1,6 +1,9 @@
 from src.leilao.dominio import Usuario, Leilao
 import pytest
 
+from src.leilao.excecoes import LanceInvalido
+
+
 @pytest.fixture
 def fulano():
     return Usuario('Fulano', 5000.0)
@@ -32,7 +35,7 @@ def test_deve_permitir_proposicao_de_lance_quando_valor_proposicao_igual_valor_c
 
 
 def test_nao_deve_permitir_proposicao_de_lance_quando_valor_proposicao_maior_valor_carteira(fulano, leilao):
-    with pytest.raises(ValueError):
+    with pytest.raises(LanceInvalido):
 
         fulano.propoe_lance(leilao, 6000.0)
 

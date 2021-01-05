@@ -2,6 +2,7 @@
 
 from unittest import TestCase
 from src.leilao.dominio import Usuario, Lance, Leilao
+from src.leilao.excecoes import LanceInvalido
 
 
 class TestLeilao(TestCase):
@@ -28,7 +29,7 @@ class TestLeilao(TestCase):
         self.assertEqual(maior_valor_esperado, self.leilao.maior_lance)
 
     def test_nao_deve_permitir_proposicao_de_lance_em_ordem_decrescente(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(LanceInvalido):
             fulano = Usuario('Fulano', 5000.0)
             lance_fulano = Lance(fulano, 1000.0)
 
@@ -48,8 +49,8 @@ class TestLeilao(TestCase):
         lance_fulano = Lance(fulano, 1000.0)
         lance_beltrano = Lance(beltrano, 2000.0)
 
-        self.leilao.propoe(self.lance_sicrano)
         self.leilao.propoe(lance_fulano)
+        self.leilao.propoe(self.lance_sicrano)
         self.leilao.propoe(lance_beltrano)
 
         menor_valor_esperado = 1000.0
@@ -80,7 +81,7 @@ class TestLeilao(TestCase):
     def test_nao_deve_permitir_proposicao_de_lance_caso_usuario_consecutivo_seja_igual(self):
         lance_sicrano2000 = Lance(self.sicrano, 2000.0)
 
-        with self.assertRaises(ValueError):  # try/except Value Error
+        with self.assertRaises(LanceInvalido):  # try/except Value Error
             self.leilao.propoe(lance_sicrano2000)
             self.leilao.propoe(self.lance_sicrano)
             # self.fail(msg='Não lançou exceção')  # precaução caso vc use try/except Value Error
